@@ -23,9 +23,9 @@ git branch --verbose
 git lfs install
 
 # publish any new files
+git fetch
 git checkout ${BRANCH_NAME}
 git add -A
 timestamp=$(date -u)
 git commit -m "formatting" || exit 0
-git pull --rebase publisher ${BRANCH_NAME}
 git push
