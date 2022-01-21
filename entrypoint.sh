@@ -28,4 +28,5 @@ git checkout ${BRANCH_NAME}
 git add -A
 timestamp=$(date -u)
 git commit -m "formatting" || exit 0
-git push
+git pull --rebase publisher ${BRANCH_NAME}
+git push publisher ${BRANCH_NAME}
